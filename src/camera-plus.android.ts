@@ -348,17 +348,6 @@ export class CameraPlus extends CameraPlusBase {
     }
   }
 
-  private _autoFocus = false;
-  public get autoFocus(): boolean {
-    return this._autoFocus;
-  }
-  public set autoFocus(focus: boolean) {
-    if (this._camera) {
-      this._camera.setAutoFocus(focus);
-    }
-    this._autoFocus = focus;
-  }
-
   _togglingCamera = false;
   /**
    * Toggle the opened camera. Only supported on devices with multiple cameras.

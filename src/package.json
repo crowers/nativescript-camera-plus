@@ -1,6 +1,6 @@
 {
   "name": "@crowers/nativescript-camera-plus",
-  "version": "7.0.4",
+  "version": "7.0.5",
   "description": "An advanced, embeddable camera for NativeScript.",
   "main": "camera-plus",
   "typings": "index.d.ts",
@@ -11,8 +11,11 @@
     }
   },
   "scripts": {
+    "build": "npm run tsc && npm run build.native",
     "build.native": "node scripts/build-native.js",
+    "prepack": "npm run build.native",
     "setup": "npm i && ts-patch install",
+    "tsc": "tsc",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\" --exclude \"**/platforms/**\" --exclude \"**/typings/**\""
   },
   "lint-staged": {

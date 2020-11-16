@@ -800,9 +800,9 @@ export class CameraPlus extends CameraPlusBase {
     CLog(`xml width/height: ${size.width}x${size.height}`);
     const frame = this._swifty.view.frame;
     this._swifty.view.frame = CGRectMake(frame.origin.x, frame.origin.y, size.width, size.height);
-    this._swifty.previewLayer.frame = CGRectMake(frame.origin.x, frame.origin.y, size.width, size.height);
+    // this._swifty.previewLayer.frame = CGRectMake(frame.origin.x, frame.origin.y, size.width, size.height);
     this._swifty.view.setNeedsLayout();
-    this._swifty.previewLayer.setNeedsLayout();
+    // this._swifty.previewLayer.setNeedsLayout();
   }
 
   private _onLayoutChangeListener: any;
