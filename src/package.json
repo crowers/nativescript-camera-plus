@@ -1,17 +1,17 @@
 {
   "name": "@crowers/nativescript-camera-plus",
-  "version": "7.0.5",
+  "version": "7.0.6",
   "description": "An advanced, embeddable camera for NativeScript.",
   "main": "camera-plus",
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "5.0.0",
-      "ios": "5.0.0"
+      "android": "7.0.0",
+      "ios": "7.0.0"
     }
   },
   "scripts": {
-    "build": "npm run tsc && npm run build.native",
+    "build": "npm i && ts-patch install && tsc && npm run build.native",
     "build.native": "node scripts/build-native.js",
     "prepack": "npm run build.native",
     "setup": "npm i && ts-patch install",
